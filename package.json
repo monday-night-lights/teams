@@ -1,0 +1,9 @@
+{
+    "name": "teams",
+    "version": "1.0.0",
+    "description": "Teams CRUD Service for MNL",
+    "author": "",
+    "dependencies": {
+      "uuid": "^2.0.3"
+    }
+}
