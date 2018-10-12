@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: circleci/node:4.8.2
     steps:
-      - checkout:
+      - checkout
       - run:
           name: Install Packages
           command: yarn install
@@ -23,7 +23,7 @@ jobs:
     docker:
       - image: circleci/node:4.8.2
     steps:
-      - checkout:
+      - checkout
       - run:
           name: Install Packages
           command: yarn install
