@@ -1,6 +1,8 @@
 version: 2
 jobs:
   build:
+    docker:
+      - image: circleci/node:4.8.2
     steps:
       - checkout:
       - run:
@@ -18,6 +20,8 @@ jobs:
       #     destination: tr1
 
   deploy:
+    docker:
+      - image: circleci/node:4.8.2
     steps:
       - checkout:
       - run:
