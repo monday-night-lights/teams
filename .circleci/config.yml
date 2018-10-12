@@ -24,12 +24,12 @@ jobs:
       - image: circleci/node:8.12
     steps:
       - checkout
-      - run:
-          name: Install Packages
-          command: yarn install
       - run: 
           name: Install Serverless
           command: yarn global add serverless
+      - run:
+          name: Install Packages
+          command: yarn install
       - run:
           name: Setup AWS Profile Permissions
           command: serverless config credentials --provider aws --key $SERVERLESS_KEY_ID --secret $SERVERLESS_KEY_SECRET
