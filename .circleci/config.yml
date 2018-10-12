@@ -29,7 +29,7 @@ jobs:
           command: yarn install
       - run: 
           name: Install Serverless
-          command: yarn global install serverless
+          command: yarn global add serverless
       - run:
           name: Setup AWS Profile Permissions
           command: serverless config credentials --provider aws --key $SERVERLESS_KEY_ID --secret $SERVERLESS_KEY_SECRET
