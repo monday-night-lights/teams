@@ -48,6 +48,7 @@ workflows:
           requires:
            - build
       - deploy:
+          context: AWS
           requires:
             - hold
           filters:
