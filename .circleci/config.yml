@@ -27,6 +27,12 @@ jobs:
       - run:
           name: Install Packages
           command: yarn install
+      - run: 
+          name: Install Serverless
+          command: yarn global install serverless
+      - run:
+          name: Setup AWS Profile Permissions
+          command: serverless config credentials --provider aws --key $SERVERLESS_KEY_ID --secret $SERVERLESS_KEY_SECRET
       - run:
           name: Deploy
           command: sls deploy
