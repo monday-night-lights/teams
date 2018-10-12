@@ -26,7 +26,9 @@ jobs:
       - checkout
       - run: 
           name: Install Serverless
-          command: yarn global add serverless
+          command: |
+            sudo npm i -g serverless
+            npm install
       - run:
           name: Install Packages
           command: yarn install
