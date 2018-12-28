@@ -8,15 +8,7 @@ const dynamoDb = new AWS.DynamoDB.DocumentClient();
 module.exports.create = (event, context, callback) => {
     const timestamp = new Date().getTime();
     const data = JSON.parse(event.body);
-    //   if (typeof data.name !== 'string') {
-    //     console.error('Validation Failed');
-    //     callback(null, {
-    //       statusCode: 400,
-    //       headers: { 'Content-Type': 'text/plain' },
-    //       body: 'Couldn\'t create team.  Message: ' + typeof data.name
-    //     });
-    //     return;
-    //   }
+
     const params = {
         TableName: process.env.DYNAMODB_TABLE,
         Item: {
