@@ -61,4 +61,4 @@ typings/
 .next
 
 # Serverless
-.serverless
+.serverless/
